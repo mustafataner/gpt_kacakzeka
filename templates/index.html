@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaçak Zeka'ya Hoş Geldiniz!</title>
+</head>
+<body>
+    <h1>Kaçak Zeka'ya Hoş Geldiniz!</h1>
+    <p>bu proje mustafa taner tarafından yazılmıştır 😎</p>
+
+    <form action="/" method="post">
+        <input type="text" name="prompt" placeholder="Bana istediğin soruyu sorabilirsin :)" value="{{ prompt }}">
+        <button type="submit">Sor</button>
+    </form>
+
+    {% if response %}
+    <p>Cevap: {{ response }}</p>
+    {% endif %}
+</body>
+</html>
