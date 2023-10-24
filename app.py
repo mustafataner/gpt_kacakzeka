@@ -23,7 +23,7 @@ def index():
         prompt = request.form.get('prompt')
 
         if prompt:
-            llm = OpenAI(temperature=0.92, model_name='gpt-3.5-turbo')
+            llm = ChatOpenAI(temperature=0.92, model_name='gpt-3.5-turbo')
             response = llm(prompt)
         else:
             response = "Lütfen bir soru girin."
