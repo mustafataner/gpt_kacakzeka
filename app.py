@@ -4,6 +4,7 @@ import os
 from flask import Flask, render_template, request
 from apikey import apikey
 from langchain.llms import OpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 from langchain.memory import ConversationBufferMemory
